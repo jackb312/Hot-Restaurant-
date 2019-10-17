@@ -35,14 +35,16 @@ app.get("/api/waitlist", function(req, res) {
     return res.json(waitlist);
 });
 
-app.post("/tables", function(req, res) {
+app.post("/api/tables", function(req, res) {
     var newTable = req.body;
     console.log(newTable);
     if(tables.length === 5) {
         waitlist.push(newTable);
+        return res.json(false);
     }
     else {
         tables.push(newTable);
+        return res.json(true);
     }
 })
 

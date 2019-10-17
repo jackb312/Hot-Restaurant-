@@ -6,9 +6,15 @@
 
 	<!-- Latest compiled and minified CSS & JS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<<<<<<< HEAD
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+=======
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+>>>>>>> 9d58c063527a5b7ecae007ae4a59f126921d4c95
 
 </head>
 <body>
@@ -22,7 +28,7 @@
 			<br>
 
 			<div class="text-center">
-				<a href="/reserve"><button type="button" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-credit-card"></span> Make Reservation</button></a>
+				<a href="/reservation"><button type="button" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-credit-card"></span> Make Reservation</button></a>
 				<a href="/"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
 			</div>
 		</div>
@@ -77,12 +83,12 @@
 		var currentURL = window.location.origin;
 
 		// The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
-		$.ajax({url: currentURL + "/api/tables", method: "GET"})
+		$.ajax({url: currentURL + "/tables", method: "GET"})
 			.done(function(tableData) {
 
 				// Here we are logging the URL so we have access to it for troubleshooting
 				console.log("------------------------------------");
-				console.log("URL: " + currentURL + "/api/tables");
+				console.log("URL: " + currentURL + "/tables");
 				console.log("------------------------------------");
 
 				// Here we then log the NYTData to console, where it will show up as an object.
@@ -114,12 +120,12 @@
 		var currentURL = window.location.origin;
 
 		// The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
-		$.ajax({url: currentURL + "/api/waitlist", method: "GET"})
+		$.ajax({url: currentURL + "waitlist", method: "GET"})
 			.done(function(waitlistData) {
 
 				// Here we are logging the URL so we have access to it for troubleshooting
 				console.log("------------------------------------");
-				console.log("URL: " + currentURL + "/api/waitlist");
+				console.log("URL: " + currentURL + "waitlist");
 				console.log("------------------------------------");
 
 				// Here we then log the NYTData to console, where it will show up as an object.

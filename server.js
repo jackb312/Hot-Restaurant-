@@ -38,7 +38,12 @@ app.get("/api/waitlist", function(req, res) {
 app.post("/tables", function(req, res) {
     var newTable = req.body;
     console.log(newTable);
-    tables.push(newTable);
+    if(tables.length === 5) {
+        waitlist.push(newTable);
+    }
+    else {
+        tables.push(newTable);
+    }
 })
 
 app.listen(PORT, function() {
